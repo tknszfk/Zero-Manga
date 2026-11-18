@@ -1,0 +1,25 @@
+/* ===== หน้าโปรไฟล์ ===== */
+.p-card { max-width: 560px; margin: 0 auto; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; }
+.p-login { text-align: center; }
+.p-login h2 { margin-bottom: 8px; }
+.p-login p { color: var(--muted); margin-bottom: 16px; }
+.p-head { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.p-head h2 { font-size: 22px; line-height: 1.3; overflow-wrap: anywhere; }
+.p-sub { color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+.p-avatar { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--primary); }
+.p-ph { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: #fff; font-size: 32px; font-weight: 600; }
+.p-stats { display: flex; gap: 12px; margin-bottom: 20px; }
+.p-stats div { flex: 1; padding: 12px; text-align: center; background: var(--surface-2); border-radius: 12px; }
+.p-stats strong { display: block; font-size: 22px; color: var(--primary); }
+.p-stats span { font-size: 13px; color: var(--muted); }
+.p-field { display: block; margin-bottom: 16px; font-size: 14px; color: var(--muted); }
+.p-field input, .p-field textarea {
+    display: block; width: 100%; margin-top: 6px; padding: 10px 14px; border-radius: 12px; resize: vertical;
+    border: 1px solid var(--border); background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.5;
+}
+.p-field input:focus, .p-field textarea:focus { border-color: var(--primary); outline: none; }
+.p-count { display: block; text-align: right; font-size: 12px; margin-top: 4px; }
+.p-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.c-btn:disabled { opacity: .6; cursor: not-allowed; }
+.p-msg { font-size: 13px; color: var(--muted); }
+@media (max-width: 480px) { .p-card { padding: 16px; } .p-avatar { width: 64px; height: 64px; } }

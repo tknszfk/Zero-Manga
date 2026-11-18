@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ["📡", "Post", null],
         ["✨", "AI Project", null],
     ];
-    const mySpace = [["👤", "Profile", null], ["🔖", "My Library", "my.html?tab=library"], ["📥", "Inbox", null], ["🕘", "History", "my.html?tab=history"]];
+    const mySpace = [["👤", "Profile", "profile.html"], ["🔖", "My Library", "my.html?tab=library"], ["📥", "Inbox", null], ["🕘", "History", "my.html?tab=history"]];
     const tab = new URLSearchParams(location.search).get("tab") || "library";
 
     const mainHTML = main.map(([ic, label, href]) => href
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         : `<span class="side-item disabled" aria-disabled="true" title="เร็ว ๆ นี้"><span>${ic}</span>${label}</span>`
     ).join("");
     const spaceHTML = mySpace.map(([ic, label, href]) => href
-        ? `<a class="side-item${page === "my.html" && href.endsWith(tab) ? " active" : ""}" href="${href}"><span>${ic}</span>${label}</a>`
+        ? `<a class="side-item${(page === "my.html" && href.endsWith(tab)) || (page === "profile.html" && label === "Profile") ? " active" : ""}" href="${href}"><span>${ic}</span>${label}</a>`
         : `<span class="side-item disabled" aria-disabled="true" title="เร็ว ๆ นี้"><span>${ic}</span>${label}</span>`
     ).join("");
 
