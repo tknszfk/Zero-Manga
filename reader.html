@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}</script>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>อ่านการ์ตูน - Zero-Manga</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html"><img src="logo.png" alt="" class="logo-img" height="32" style="height:32px;width:auto"> Zero-Manga</a>
+        <nav><a href="index.html">หน้าแรก</a>
+            <a href="all.html">มังงะทั้งหมด</a>
+            <a href="my.html?tab=library">คลังของฉัน</a></nav>
+        <div class="header-right">
+            <button id="toggleMode" class="mode-btn" type="button">☀️ โหมดกลางวัน</button>
+        </div>
+    </header>
+
+    <main class="reader-main">
+        <h1 id="comicTitle">กำลังโหลด...</h1>
+
+        <div class="reader-controls top-controls">
+            <button id="prevChapter" type="button">← ตอนก่อนหน้า</button>
+            <select id="chapterSelect" aria-label="เลือกตอน"></select>
+            <button id="nextChapter" type="button">ตอนถัดไป →</button>
+        </div>
+
+        <div class="reader-container" id="readerContainer"></div>
+
+        <div class="reader-controls bottom-controls">
+            <button id="prevChapterBottom" type="button">← ตอนก่อนหน้า</button>
+            <select id="chapterSelectBottom" aria-label="เลือกตอน"></select>
+            <button id="nextChapterBottom" type="button">ตอนถัดไป →</button>
+        </div>
+    </main>
+
+    <footer><p>© 2026 Zero-Manga | เว็บอ่านการ์ตูนออนไลน์</p></footer>
+
+    <button id="scrollTopBtn" type="button" title="กลับขึ้นบน" aria-label="กลับขึ้นบน">⬆</button>
+
+    <script src="data.js"></script>
+    <script src="common.js"></script>
+    <script src="reader.js"></script>
+    <script src="comments.js"></script>
+</body>
+</html>

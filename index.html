@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}</script>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Zero-Manga - หน้าแรก</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html"><img src="logo.png" alt="" class="logo-img" height="32" style="height:32px;width:auto"> Zero-Manga</a>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="all.html">มังงะทั้งหมด</a>
+            <a href="my.html?tab=library">คลังของฉัน</a>
+        </nav>
+        <div class="header-right">
+            <div class="search-box">
+                <input id="searchInput" type="search" placeholder="ค้นหาการ์ตูน..." autocomplete="off" aria-label="ค้นหาการ์ตูน">
+                <div id="search-suggestions"></div>
+            </div>
+            <button id="toggleMode" class="mode-btn" type="button">☀️ โหมดกลางวัน</button>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1>อ่านการ์ตูนออนไลน์ฟรี</h1>
+        <p>อัปเดตตอนใหม่ทุกวัน ครบทุกแนว ✨</p>
+    </section>
+
+    <section class="section">
+        <h2>🔥 ตอนอัปเดตล่าสุด</h2>
+        <div class="card-container" id="latestComics"></div>
+    </section>
+
+    <section class="section">
+        <h2>⭐ ยอดนิยม</h2>
+        <div class="card-container" id="popularComics"></div>
+    </section>
+
+    <footer><p>© 2026 Zero-Manga | เว็บอ่านการ์ตูนออนไลน์</p></footer>
+
+    <script src="data.js"></script>
+    <script src="common.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
